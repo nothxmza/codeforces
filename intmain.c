@@ -6,12 +6,28 @@
 
 
 
+/*tram
+int main(void)
+{
+    int n;
+    int entre;
+    int sortie;
+    int count = 0;
+    int total = 0;
+    scanf("%d",&n);
+    while(n-- >0)
+    {
+        scanf("%d %d",&sortie , &entre);
+        count += entre;
+        count -= sortie;
+        if(count > total)
+            total = count;
+        
+    }
+    printf("%d",total);
+}
 
-
-
-
-
-/*football
+football
 int main(void)
 {
     char str[100];
