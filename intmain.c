@@ -1,12 +1,52 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <limits.h>
 
+/*
+next round
+int main(void)
+{
+    int n,k,i = 0;
+    int nbr = 0;
+    int nbr2 = 0;
+    int count = 0;
+    scanf("%d %d",&n,&k);
+    while(i++ < n)
+    {
+        scanf("%d",&nbr);
+        if(i == k)
+            nbr2 = nbr;
+        if(nbr2 <= nbr && nbr != 0)
+             count++;
+    }
+    printf("%d",count);
+}
+///les vecteurs
+int main(void)
+{
+    int a = 0;
+    int b = 0;
+    int j = 0;
+    int x,y,z = 0;
+    int n = 0;
+    scanf("%d",&n);
+    while(n-- > 0)
+    {
+        scanf("%d %d %d",&x,&y,&z);
+        a += x;
+        b += y;
+        j += z;
+    }
+        if(a == 0 && b == 0 && j == 0)
+            printf("YES");
+        else
+            printf("NO");
+}
 
-
-/*tram
+tram
 int main(void)
 {
     int n;
