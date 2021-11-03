@@ -6,6 +6,29 @@
 #include <limits.h>
 
 
+int		ft_atoi(const char *str)
+{
+	unsigned int	num;
+	int				i;
+	int				np;
+
+	np = 1;
+	i = 0;
+	num = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f' ||
+			str[i] == '\r' || str[i] == '\n' || str[i] == '\v')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
+			np = -1;
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	return ((int)(np * num));
+}
+
 int main(void)
 {
     int i = 0;
@@ -26,9 +49,20 @@ int main(void)
     nbr = malloc(sizeof(int)*strlen(str2));
     x = 0;
     int l = 0;
+    char str3[255];
+    int p = 0;
     int k = strlen(str2);
     while(str2[l])
-         printf("%c\n",str2[l++]);
+        str3[p++] = str2[l++];
+
+    l = 0;
+    p = 0;
+    while(str2[x])
+    {
+        while(str3[p])
+    }
+    printf("%s",str3);
+
     //nbr[j++] = atoi(str);
 }
 
