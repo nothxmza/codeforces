@@ -6,6 +6,52 @@
 #include <limits.h>
 
 
+int cmpfunc (const void * a, const void * b){
+   return ( *(int*)a - *(int*)b );
+}
+int main(void)
+{
+	int *nbr;
+	char str[255];
+	int i = 0;
+	int x = 0;
+	int count = 0;
+	
+
+	scanf("%s",str);
+	nbr = malloc(sizeof(int)*strlen(str));
+	count = strlen(str);
+	if(!nbr)
+		return(0);
+	while(str[i])
+	{
+		if(i %2 == 0)
+			nbr[x++] = atoi(&str[i]);
+		i++;
+	}
+	nbr[x] = 2147483647;
+	qsort(nbr, x + 1, sizeof(int), cmpfunc);
+			printf("%d\n",nbr[0]);
+			printf("%d\n",nbr[1]);
+			printf("%d\n",nbr[2]);
+			printf("%d\n",nbr[i]);
+
+			
+
+	i = 0;
+	while(count  > i - 1)
+	{
+		
+		
+		printf("t %d\n",i);
+		i++;
+	}
+	
+
+
+
+	//cout << count;
+}
 int		ft_atoi(const char *str)
 {
 	unsigned int	num;
