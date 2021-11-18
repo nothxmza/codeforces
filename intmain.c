@@ -6,6 +6,14 @@
 #include <limits.h>
 
 
+
+
+
+
+
+
+/*
+//helpful math
 int cmpfunc (const void * a, const void * b){
    return ( *(int*)a - *(int*)b );
 }
@@ -16,8 +24,8 @@ int main(void)
 	int i = 0;
 	int x = 0;
 	int count = 0;
+    int g = 0;
 	
-
 	scanf("%s",str);
 	nbr = malloc(sizeof(int)*strlen(str));
 	count = strlen(str);
@@ -31,27 +39,20 @@ int main(void)
 	}
 	nbr[x] = 2147483647;
 	qsort(nbr, x + 1, sizeof(int), cmpfunc);
-			printf("%d\n",nbr[0]);
-			printf("%d\n",nbr[1]);
-			printf("%d\n",nbr[2]);
-			printf("%d\n",nbr[i]);
-
-			
-
+    g = x;
 	i = 0;
-	while(count  > i - 1)
+    //printf("%d",count);
+	while(count -1 >= i)
 	{
-		
-		
-		printf("t %d\n",i);
+        if(i < g)
+            printf("%d",nbr[i]);
+        
+        if(i < g - 1)
+             printf("+");
 		i++;
 	}
-	
-
-
-
-	//cout << count;
 }
+//cout << count;
 int		ft_atoi(const char *str)
 {
 	unsigned int	num;
@@ -112,9 +113,7 @@ int main(void)
     //nbr[j++] = atoi(str);
 }
 
-
-
-/*linear keyboard
+//linear keyboard
 int main(void)
 {
     int g = 0;
